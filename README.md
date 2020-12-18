@@ -22,7 +22,8 @@ $prods = array(
 	)
 );
 
-<?php
+require_once('ArrayPaginator.php');
+
 $peger = new ArrayPaginator('https://example.com/', 10); 
 $items = $peger->getItems($prods);
  
@@ -58,4 +59,5 @@ if ($peger->page == 1) {
 </div>
  
 <?php echo $peger->display; ?>
+
 ```
